@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Childprops } from './Childprops'
+import { Childprops1 } from './Childprops1'
 
 
 export function Props(){
@@ -13,6 +14,12 @@ export function Props(){
         rate : 4.9
     }
 
+    let arr = [1,2,3]
+
+    let warn ={
+        err : "this is error", 
+        status : 404    
+    }
     
 
  return(
@@ -26,6 +33,7 @@ export function Props(){
 
     <button onClick={() => setNum(num-1)}>-</button>
 
+    <Childprops1 item={obj} list={arr}{...warn} num={num}/>
     </>
  )
 
