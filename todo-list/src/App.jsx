@@ -38,8 +38,8 @@ function App() {
 
     <div className="container border border-dark rounded-3 p-3">
 
-        <input type="text" onChange={(e) => {setTask(e.target.value)}} className='bg-light text-dark'/>
-        <button onClick={handletask} className='btn btn-sm  btn-outline-dark m-1'>Add</button>  
+        <input type="text" onChange={(e) => {setTask(e.target.value)}} className='bg-light p-2 border rounded border-dark text-dark'/>
+        <button onClick={handletask} className='btn btn-sm  btn-dark m-1 p-2'>Add</button>  
 
 
     <div className="container border mt-5">
