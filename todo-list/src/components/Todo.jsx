@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import App from "../App";
+import List from "./List";
+
+
 
 function Add({}){
 
@@ -27,6 +29,8 @@ function Add({}){
             <input type="text" onChange={(e) => {setTask(e.target.value)}} className='bg-light p-2 border rounded border-dark text-dark'/>
             <button onClick={handletask} className='btn btn-sm  btn-dark m-1 p-2'>Add</button>  
             </div>
+
+            <List list={taskList} setTasklist={setTaskList}/>
         </>
       )
 
