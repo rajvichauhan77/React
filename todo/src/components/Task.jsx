@@ -19,9 +19,28 @@ function Task(){
             id: uuidv4() 
         }
 
+        setTask("")
+
+        // list.push(obj)
 
         setList([...list, obj])
-        // console.log(list)
+
+        // console.log(delTask)
+
+        
+
+        function updateTask(id){
+            const update = list.map((ele) => ele.id === id ? {...ele, status : !ele.status} : ele)
+            
+            setList(update)
+    }
+
+        function delTask(id){
+            const update = list.filter((ele) => ele.id != id)
+            setList(update)
+        }
+
+
     }
 
 
@@ -32,7 +51,7 @@ function Task(){
         <>
            <Addtask setTask={setTask} handleTask={handleTask}/>
 
-           <List list={list} />
+           <List list={list} delTask={delTask} updateTask={updateTask} />
         </>
 
     )
