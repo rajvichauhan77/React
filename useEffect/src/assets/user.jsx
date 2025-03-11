@@ -3,7 +3,7 @@ import React from "react";
  export function User({data}){
     return(
 
-        <div className="container row g-3">
+        <div className="container row border g-3">
         {
             data.map((ele) => ( 
             <div className="col-3">

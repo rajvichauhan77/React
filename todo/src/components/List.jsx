@@ -6,7 +6,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 export function List({list, delTask, updateTask}){
 
    
-    // console.log(list)
+    console.log(list)
 
     return(
         <>
