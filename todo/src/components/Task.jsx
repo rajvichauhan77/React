@@ -10,7 +10,25 @@ function Task(){
 
     const [task, setTask] = useState("")
     const [list, setList] = useState([])
+    const [count, setCount] = useState(0)
+    const [todo, setTodo] = useState([])
 
+
+
+    function handleTodo(ele, index){
+
+        let newTodo = [...todo]
+
+        newTodo[index] = {
+            to : ele,
+            status : false,
+            id :  uuidv4() 
+        }
+
+         setTodo(newTodo)
+
+         setCount(index+2)
+    }
 
     function handleTask(){
         let obj = {
@@ -19,20 +37,22 @@ function Task(){
             id: uuidv4() 
         }
 
-        setTask("")
-
-        // list.push(obj)
-
-        setList([...list, obj])
-
-        // console.log(delTask)
+        setTask(" ")
+        setCount(0)
+        setTodo([])
 
         
+         setList([...list, obj])
+
+
+    }
+
 
         function updateTask(id){
             const update = list.map((ele) => ele.id === id ? {...ele, status : !ele.status} : ele)
             
             setList(update)
+            
     }
 
         function delTask(id){
@@ -41,17 +61,14 @@ function Task(){
         }
 
 
-    }
-
-
   
 
     return(
 
         <>
-           <Addtask setTask={setTask} handleTask={handleTask}/>
+           <Addtask setTask={setTask} handleTask={handleTask} count={count} setCount={setCount} todo={todo}/>
 
-           <List list={list} delTask={delTask} updateTask={updateTask} />
+           <List list={list} delTask={delTask} updateTask={updateTask} handleTodo={handleTodo}/>
         </>
 
     )

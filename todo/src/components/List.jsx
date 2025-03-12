@@ -19,7 +19,7 @@ export function List({list, delTask, updateTask}){
 
                         <Card className="d-flex">
                              {ele.task}
-                             <button className="btn mt-2 m-auto btn-outline-secondary btn-sm w-50" onClick={() => updateTask(ele.id)}>Edit</button>
+                             <button className="btn mt-2 m-auto btn-outline-secondary btn-sm w-50" onClick={() => updateTask(ele.id)} variant="warning">Edit</button>
                              <button  className="btn mt-1 m-auto btn-outline-secondary btn-sm w-50" onClick={() => delTask(ele.id)}>Delete</button>
                         </Card>
                        
