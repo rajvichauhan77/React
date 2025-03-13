@@ -19,7 +19,7 @@ function Addtask({ setTask, handleTask, count, setCount, handleTodo, todo}){
 
 
                         <div className="row p-4">
-                        {[...Array(count)].map((ele , index) => (
+                        {[...Array(count)].map((ele, index) => (
                               <div className="col-12 d-flex">
 
                               <Button className='btn btn-light btn-sm p-0 '  >📝</Button>
@@ -32,6 +32,12 @@ function Addtask({ setTask, handleTask, count, setCount, handleTodo, todo}){
                         </div>
     
                      </Col>
+
+                     <Col lg={1} className="mx-auto d-flex">
+                    
+                    </Col>
+                    
+                    <Col lg={2}></Col>
                 </Row>
 
                

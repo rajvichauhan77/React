@@ -41,7 +41,7 @@ function Task(){
         setCount(0)
         setTodo([])
 
-        
+        // list.push(obj)
          setList([...list, obj])
 
 
