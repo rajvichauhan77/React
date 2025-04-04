@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { ApiContext } from "../context/ApiContext";
-import { useParams } from "react-router-dom";
+//  import { useParams } from "react-router-dom";
 
 
 

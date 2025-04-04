@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { ApiContext } from "../context/ApiContext";
 
 
-const User = () => {
+const Users = () => {
 
     const {setUser, users} = useContext(ApiContext)
 
@@ -31,4 +31,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Users
